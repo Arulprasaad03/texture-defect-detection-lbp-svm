@@ -1,0 +1,13 @@
+key,value
+cpu,13th Gen Intel(R) Core(TM) i5-13450HX
+cpu_processor_string,"Intel64 Family 6 Model 183 Stepping 1, GenuineIntel"
+cores_logical,16
+cores_physical,10
+ram_gb,15.69
+os,Windows-10-10.0.26300-SP0
+python,3.10.11
+numpy,2.2.6
+sklearn,1.7.2
+torch,2.14.1+cpu
+torchvision,0.29.1+cpu
+pandas,2.3.3

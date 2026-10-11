@@ -1,0 +1,4 @@
+method,accuracy,accuracy_mean,accuracy_std,balanced_accuracy,balanced_accuracy_mean,balanced_accuracy_std,precision,precision_mean,precision_std,recall,recall_mean,recall_std,f1,f1_mean,f1_std,roc_auc,roc_auc_mean,roc_auc_std,pr_auc,pr_auc_mean,pr_auc_std,mcc,mcc_mean,mcc_std
+P1,0.8763±—,0.8763,,0.8432±—,0.8432,,0.6983±—,0.6983,,0.7852±—,0.7852,,0.7294±—,0.7294,,0.9190±—,0.9190,,0.8212±—,0.8212,,0.6603±—,0.6603,
+P2,0.8737±—,0.8737,,0.8390±—,0.8390,,0.6864±—,0.6864,,0.7812±—,0.7812,,0.7204±—,0.7204,,0.9079±—,0.9079,,0.7833±—,0.7833,,0.6508±—,0.6508,
+P3,0.9037±—,0.9037,,0.8738±—,0.8738,,0.7620±—,0.7620,,0.8228±—,0.8228,,0.7849±—,0.7849,,0.9305±—,0.9305,,0.8517±—,0.8517,,0.7293±—,0.7293,

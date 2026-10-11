@@ -1,0 +1,16 @@
+category,method,seed,best_kernel,best_C,best_gamma,best_cv_f1,n_support_vectors,n_configs
+carpet,P1,42,rbf,100.0000,0.01,0.7521,122,16
+carpet,P2,42,rbf,100.0000,scale,0.8007,144,16
+carpet,P3,42,rbf,100.0000,scale,0.7334,131,16
+grid,P1,42,linear,1.0000,,0.4151,105,16
+grid,P2,42,linear,0.1000,,0.3519,131,16
+grid,P3,42,linear,1.0000,,0.4421,91,16
+leather,P1,42,rbf,10.0000,0.01,0.8715,82,16
+leather,P2,42,rbf,10.0000,scale,0.8699,117,16
+leather,P3,42,rbf,10.0000,scale,0.8771,106,16
+tile,P1,42,rbf,0.1000,0.01,0.8303,186,16
+tile,P2,42,rbf,1.0000,scale,0.8238,126,16
+tile,P3,42,linear,0.1000,,0.8379,60,16
+wood,P1,42,linear,0.1000,,0.7343,98,16
+wood,P2,42,linear,1.0000,,0.8037,53,16
+wood,P3,42,rbf,10.0000,scale,0.8189,102,16

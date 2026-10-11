@@ -1,0 +1,6 @@
+category,n_normal,n_defect,train_normal,train_defect,test_normal,test_defect,n_color,n_cut,n_hole,n_metal_contamination,n_thread,n_bent,n_broken,n_glue,n_fold,n_poke,n_crack,n_glue_strip,n_gray_stroke,n_oil,n_rough,n_combined,n_liquid,n_scratch
+carpet,308,89,215,62,93,27,19.0,17.0,17.0,17.0,19.0,,,,,,,,,,,,,
+grid,285,57,199,40,86,17,,,,11.0,11.0,12.0,12.0,11.0,,,,,,,,,,
+leather,277,92,194,64,83,28,19.0,19.0,,,,,,19.0,17.0,18.0,,,,,,,,
+tile,263,84,183,59,80,25,,,,,,,,,,,17.0,18.0,16.0,18.0,15.0,,,
+wood,266,60,186,42,80,18,8.0,,10.0,,,,,,,,,,,,,11.0,10.0,21.0

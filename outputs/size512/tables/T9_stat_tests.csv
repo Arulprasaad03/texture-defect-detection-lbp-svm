@@ -1,0 +1,3 @@
+comparison,n,W,p,mean_diff,note
+P2 vs P1,5,,,-0.008983,n<6 or identical: skipped (n=5)
+P3 vs P2,5,,,0.064468,n<6 or identical: skipped (n=5)
