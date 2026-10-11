@@ -1,0 +1,32 @@
+dataset_root: "D:/MV Project/texture-defect-detection-lbp-svm/dataset/MVTec AD"
+output_root:  "D:/MV Project/texture-defect-detection-lbp-svm/outputs_quick"
+cache_root:   "D:/MV Project/texture-defect-detection-lbp-svm/data_cache"
+categories: [carpet, leather]
+seeds: [42]
+b2_seeds: [42]
+image_size: 256
+test_size: 0.30
+cv_folds: 5
+glcm_levels: 32
+mi_k: 100
+cnn:
+  input_size: 224
+  epochs: 1
+  batch_size: 16
+  lr: 0.0001
+  weight_decay: 0.0001
+patch:
+  window: 64
+  stride_train: 32
+  stride_infer: 16
+  pos_frac: 0.25
+  neg_ratio: 3
+  loc_val_frac: 0.20
+  heat_sigma: 8
+latency:
+  n_images: 200
+  warmup: 20
+  sample_seed: 0
+gallery_seed: 42
+run_ablations: false
+run_gallery: false
