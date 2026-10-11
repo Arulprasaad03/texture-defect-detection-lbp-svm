@@ -1,0 +1,4 @@
+method,category,TN,FP,FN,TP
+P3,carpet,86,7,9,18
+P3,leather,83,0,2,26
+P3,pooled,169,7,11,44

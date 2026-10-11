@@ -1,0 +1,6 @@
+method,feature_dim,n_params_or_SVs,model_size_MB,gflops,gpu_required,training_data_needed
+P1,59,138.0 SVs (mean),0.0681,N/A,no,labelled normal + defect images
+P2,177,140.5 SVs (mean),0.1985,N/A,no,labelled normal + defect images
+P3,201 raw -> 100 selected,115.5 SVs (mean),0.0987,N/A,no,labelled normal + defect images
+B1,512,11176512 params + 169.5 SVs,43.3870,3.627122688,no,labelled normal + defect images
+B2,512,11177538 params,42.7124,3.627124736,no,labelled normal + defect images

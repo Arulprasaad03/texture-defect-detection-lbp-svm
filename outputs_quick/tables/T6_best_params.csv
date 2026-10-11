@@ -1,0 +1,9 @@
+category,method,seed,best_kernel,best_C,best_gamma,best_cv_f1,n_support_vectors,n_configs
+carpet,P1,42,rbf,1,scale,0.6502,182,16
+carpet,P2,42,rbf,10,scale,0.7368,157,16
+carpet,P3,42,rbf,10,scale,0.7112,132,16
+carpet,B1,42,rbf,1,scale,0.8690,150,16
+leather,P1,42,rbf,10,0.01,0.9276,94,16
+leather,P2,42,rbf,10,scale,0.9234,124,16
+leather,P3,42,rbf,10,scale,0.9295,99,16
+leather,B1,42,rbf,10,0.01,0.9519,189,16

@@ -1,0 +1,16 @@
+img_id,category,defect_type,label,method,seed,score,pred,a,kind
+leather/test/color/007,leather,color,1,P3,42,-1.420515,0,1.420515,FN
+carpet/test/metal_contamination/014,carpet,metal_contamination,1,P3,42,-1.132434,0,1.132434,FN
+carpet/test/color/007,carpet,color,1,P3,42,-1.027161,0,1.027161,FN
+carpet/test/thread/018,carpet,thread,1,P3,42,-0.970483,0,0.970483,FN
+carpet/test/metal_contamination/013,carpet,metal_contamination,1,P3,42,-0.449836,0,0.449836,FN
+carpet/test/color/006,carpet,color,1,P3,42,-0.192783,0,0.192783,FN
+carpet/test/hole/006,carpet,hole,1,P3,42,-0.189499,0,0.189499,FN
+carpet/test/cut/004,carpet,cut,1,P3,42,-0.154136,0,0.154136,FN
+carpet/train/good/205,carpet,good,0,P3,42,1.309057,1,1.309057,FP
+carpet/train/good/201,carpet,good,0,P3,42,0.612877,1,0.612877,FP
+carpet/train/good/200,carpet,good,0,P3,42,0.530722,1,0.530722,FP
+carpet/train/good/071,carpet,good,0,P3,42,0.284481,1,0.284481,FP
+carpet/train/good/174,carpet,good,0,P3,42,0.237827,1,0.237827,FP
+carpet/test/good/010,carpet,good,0,P3,42,0.134033,1,0.134033,FP
+carpet/train/good/034,carpet,good,0,P3,42,0.037094,1,0.037094,FP

@@ -1,0 +1,7 @@
+target,value,threshold,met
+"F1 > 0.90 (carpet, best of P1-P3 = P2)",0.7547,0.9,no
+"F1 > 0.90 (leather, best of P1-P3 = P3)",0.9630,0.9,yes
+latency < 30 ms (P1),98.2072,30,no
+latency < 30 ms (P2),46.7688,30,no
+latency < 30 ms (P3),55.9511,30,no
+"P2 - P1 macro F1 gain in [0.08, 0.15]",0.0525,0.08-0.15,no

@@ -1,0 +1,13 @@
+category,prop,delta
+carpet,contrast,-0.779947
+carpet,dissimilarity,-0.792363
+carpet,homogeneity,0.820204
+carpet,energy,0.620144
+carpet,correlation,0.923745
+carpet,ASM,0.613555
+leather,contrast,-1.374121
+leather,dissimilarity,-1.468181
+leather,homogeneity,1.502556
+leather,energy,1.480024
+leather,correlation,-0.343469
+leather,ASM,1.267216
