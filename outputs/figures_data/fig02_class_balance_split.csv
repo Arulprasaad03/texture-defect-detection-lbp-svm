@@ -1,0 +1,6 @@
+category,train_normal,train_defect,test_normal,test_defect
+carpet,215,62,93,27
+grid,199,40,86,17
+leather,194,64,83,28
+tile,183,59,80,25
+wood,186,42,80,18

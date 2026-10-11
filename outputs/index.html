@@ -1,0 +1,307 @@
+<html><head><meta charset='utf-8'><title>Texture defect detection - results</title><style>body{font-family:sans-serif;margin:2em}img{max-width:100%}table{border-collapse:collapse}td,th{border:1px solid #999;padding:3px 8px;font-size:13px}</style></head><body>
+<h1>Lightweight texture-based defect detection (LBP + GLCM + SVM) vs CNN baselines</h1>
+<h2>T1 - metrics per method (macro, mean±std over seeds)</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>method</th>
+      <th>accuracy</th>
+      <th>balanced_accuracy</th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>f1</th>
+      <th>roc_auc</th>
+      <th>pr_auc</th>
+      <th>mcc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P1</td>
+      <td>0.8549±0.0133</td>
+      <td>0.7981±0.0141</td>
+      <td>0.6738±0.0297</td>
+      <td>0.7049±0.0496</td>
+      <td>0.6783±0.0152</td>
+      <td>0.8652±0.0109</td>
+      <td>0.7218±0.0143</td>
+      <td>0.5950±0.0184</td>
+    </tr>
+    <tr>
+      <td>P2</td>
+      <td>0.8748±0.0204</td>
+      <td>0.8021±0.0161</td>
+      <td>0.7314±0.0368</td>
+      <td>0.6820±0.0191</td>
+      <td>0.6934±0.0228</td>
+      <td>0.8851±0.0073</td>
+      <td>0.7657±0.0228</td>
+      <td>0.6254±0.0347</td>
+    </tr>
+    <tr>
+      <td>P3</td>
+      <td>0.8815±0.0112</td>
+      <td>0.8294±0.0140</td>
+      <td>0.7193±0.0275</td>
+      <td>0.7435±0.0446</td>
+      <td>0.7224±0.0153</td>
+      <td>0.9020±0.0077</td>
+      <td>0.7827±0.0067</td>
+      <td>0.6548±0.0168</td>
+    </tr>
+    <tr>
+      <td>B1</td>
+      <td>0.9315±0.0123</td>
+      <td>0.8689±0.0223</td>
+      <td>0.8577±0.0483</td>
+      <td>0.7663±0.0463</td>
+      <td>0.8049±0.0325</td>
+      <td>0.9432±0.0090</td>
+      <td>0.8754±0.0247</td>
+      <td>0.7683±0.0398</td>
+    </tr>
+    <tr>
+      <td>B2</td>
+      <td>0.9868±—</td>
+      <td>0.9713±—</td>
+      <td>0.9913±—</td>
+      <td>0.9451±—</td>
+      <td>0.9671±—</td>
+      <td>0.9896±—</td>
+      <td>0.9885±—</td>
+      <td>0.9596±—</td>
+    </tr>
+  </tbody>
+</table>
+<h2>T4 - inference latency (ms per image, 1 thread)</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>method</th>
+      <th>median_ms</th>
+      <th>mean_ms</th>
+      <th>p95_ms</th>
+      <th>fps</th>
+      <th>preprocess_ms</th>
+      <th>features_ms</th>
+      <th>scaler_selector_ms</th>
+      <th>svm_ms</th>
+      <th>t_read_ms</th>
+      <th>peak_rss_mb</th>
+      <th>n_timed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P1</td>
+      <td>38.1159</td>
+      <td>36.8056</td>
+      <td>48.0812</td>
+      <td>26.2358</td>
+      <td>29.2536</td>
+      <td>6.8375</td>
+      <td>0.2828</td>
+      <td>0.1577</td>
+      <td>26.6212</td>
+      <td>870.2200</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>P2</td>
+      <td>53.2934</td>
+      <td>52.5484</td>
+      <td>62.7643</td>
+      <td>18.7641</td>
+      <td>27.9455</td>
+      <td>22.5700</td>
+      <td>0.3218</td>
+      <td>0.1842</td>
+      <td>26.6212</td>
+      <td>869.1400</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>P3</td>
+      <td>53.5177</td>
+      <td>51.9454</td>
+      <td>59.1407</td>
+      <td>18.6854</td>
+      <td>27.2163</td>
+      <td>22.9241</td>
+      <td>0.4080</td>
+      <td>0.1583</td>
+      <td>26.6212</td>
+      <td>869.5100</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>B1</td>
+      <td>57.5929</td>
+      <td>59.0407</td>
+      <td>69.0025</td>
+      <td>17.3633</td>
+      <td>5.6456</td>
+      <td>48.3008</td>
+      <td>0.3226</td>
+      <td>0.2142</td>
+      <td>26.6212</td>
+      <td>1013.2400</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>B2</td>
+      <td>57.4164</td>
+      <td>58.6782</td>
+      <td>67.5744</td>
+      <td>17.4166</td>
+      <td>5.6246</td>
+      <td>49.1272</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>26.6212</td>
+      <td>1177.9800</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>B2_allthreads</td>
+      <td>41.6048</td>
+      <td>46.8710</td>
+      <td>53.5015</td>
+      <td>24.0357</td>
+      <td>11.7779</td>
+      <td>25.0194</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>26.6212</td>
+      <td>1190.4100</td>
+      <td>200</td>
+    </tr>
+  </tbody>
+</table>
+<h2>T0 - proposal targets met / not met</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>target</th>
+      <th>value</th>
+      <th>threshold</th>
+      <th>met</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>F1 &gt; 0.90 (carpet, best of P1-P3 = P2)</td>
+      <td>0.7326</td>
+      <td>0.9</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>F1 &gt; 0.90 (grid, best of P1-P3 = P3)</td>
+      <td>0.3876</td>
+      <td>0.9</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>F1 &gt; 0.90 (leather, best of P1-P3 = P3)</td>
+      <td>0.9605</td>
+      <td>0.9</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>F1 &gt; 0.90 (tile, best of P1-P3 = P1)</td>
+      <td>0.8143</td>
+      <td>0.9</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>F1 &gt; 0.90 (wood, best of P1-P3 = P3)</td>
+      <td>0.7975</td>
+      <td>0.9</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>latency &lt; 30 ms (P1)</td>
+      <td>38.1159</td>
+      <td>30</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>latency &lt; 30 ms (P2)</td>
+      <td>53.2934</td>
+      <td>30</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>latency &lt; 30 ms (P3)</td>
+      <td>53.5177</td>
+      <td>30</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>P2 - P1 macro F1 gain in [0.08, 0.15]</td>
+      <td>0.0151</td>
+      <td>0.08-0.15</td>
+      <td>no</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Figures</h2>
+<h3>fig01 dataset montage</h3><a href='figures/fig01_dataset_montage.png'><img src='figures/fig01_dataset_montage.png'></a>
+<h3>fig02 class balance split</h3><a href='figures/fig02_class_balance_split.png'><img src='figures/fig02_class_balance_split.png'></a>
+<h3>fig03 preprocessing chain</h3><a href='figures/fig03_preprocessing_chain.png'><img src='figures/fig03_preprocessing_chain.png'></a>
+<h3>fig04 lbp maps hist</h3><a href='figures/fig04_lbp_maps_hist.png'><img src='figures/fig04_lbp_maps_hist.png'></a>
+<h3>fig05 multiscale histograms</h3><a href='figures/fig05_multiscale_histograms.png'><img src='figures/fig05_multiscale_histograms.png'></a>
+<h3>fig06 glcm matrices</h3><a href='figures/fig06_glcm_matrices.png'><img src='figures/fig06_glcm_matrices.png'></a>
+<h3>fig07 glcm haralick delta</h3><a href='figures/fig07_glcm_haralick_delta.png'><img src='figures/fig07_glcm_haralick_delta.png'></a>
+<h3>fig08 pca variance mi top20</h3><a href='figures/fig08_pca_variance_mi_top20.png'><img src='figures/fig08_pca_variance_mi_top20.png'></a>
+<h3>fig09 feature space pca2d</h3><a href='figures/fig09_feature_space_pca2d.png'><img src='figures/fig09_feature_space_pca2d.png'></a>
+<h3>fig10 confusion P1</h3><a href='figures/fig10_confusion_P1.png'><img src='figures/fig10_confusion_P1.png'></a>
+<h3>fig11 confusion P2</h3><a href='figures/fig11_confusion_P2.png'><img src='figures/fig11_confusion_P2.png'></a>
+<h3>fig12 confusion P3</h3><a href='figures/fig12_confusion_P3.png'><img src='figures/fig12_confusion_P3.png'></a>
+<h3>fig13 confusion B1 B2</h3><a href='figures/fig13_confusion_B1_B2.png'><img src='figures/fig13_confusion_B1_B2.png'></a>
+<h3>fig14 roc curves</h3><a href='figures/fig14_roc_curves.png'><img src='figures/fig14_roc_curves.png'></a>
+<h3>fig15 pr curves</h3><a href='figures/fig15_pr_curves.png'><img src='figures/fig15_pr_curves.png'></a>
+<h3>fig16 percategory f1 bar</h3><a href='figures/fig16_percategory_f1_bar.png'><img src='figures/fig16_percategory_f1_bar.png'></a>
+<h3>fig17 metric summary heatmap</h3><a href='figures/fig17_metric_summary_heatmap.png'><img src='figures/fig17_metric_summary_heatmap.png'></a>
+<h3>fig18 defecttype recall heatmap</h3><a href='figures/fig18_defecttype_recall_heatmap.png'><img src='figures/fig18_defecttype_recall_heatmap.png'></a>
+<h3>fig19 seed variability box</h3><a href='figures/fig19_seed_variability_box.png'><img src='figures/fig19_seed_variability_box.png'></a>
+<h3>fig20 score distributions</h3><a href='figures/fig20_score_distributions.png'><img src='figures/fig20_score_distributions.png'></a>
+<h3>fig21 ablation scales</h3><a href='figures/fig21_ablation_scales.png'><img src='figures/fig21_ablation_scales.png'></a>
+<h3>fig22 ablation features selector</h3><a href='figures/fig22_ablation_features_selector.png'><img src='figures/fig22_ablation_features_selector.png'></a>
+<h3>fig23 ablation k sweep</h3><a href='figures/fig23_ablation_k_sweep.png'><img src='figures/fig23_ablation_k_sweep.png'></a>
+<h3>fig24 learning curve</h3><a href='figures/fig24_learning_curve.png'><img src='figures/fig24_learning_curve.png'></a>
+<h3>fig25 training time bars</h3><a href='figures/fig25_training_time_bars.png'><img src='figures/fig25_training_time_bars.png'></a>
+<h3>fig26 inference latency bars</h3><a href='figures/fig26_inference_latency_bars.png'><img src='figures/fig26_inference_latency_bars.png'></a>
+<h3>fig27 speedup bars</h3><a href='figures/fig27_speedup_bars.png'><img src='figures/fig27_speedup_bars.png'></a>
+<h3>fig28 accuracy vs latency</h3><a href='figures/fig28_accuracy_vs_latency.png'><img src='figures/fig28_accuracy_vs_latency.png'></a>
+<h3>fig29 accuracy vs traintime</h3><a href='figures/fig29_accuracy_vs_traintime.png'><img src='figures/fig29_accuracy_vs_traintime.png'></a>
+<h3>fig30 resource table</h3><a href='figures/fig30_resource_table.png'><img src='figures/fig30_resource_table.png'></a>
+<h3>fig31 size ablation 256 512</h3><a href='figures/fig31_size_ablation_256_512.png'><img src='figures/fig31_size_ablation_256_512.png'></a>
+<h3>fig32 localization carpet</h3><a href='figures/fig32_localization_carpet.png'><img src='figures/fig32_localization_carpet.png'></a>
+<h3>fig38 lbp rarity maps</h3><a href='figures/fig38_lbp_rarity_maps.png'><img src='figures/fig38_lbp_rarity_maps.png'></a>
+<h3>fig39 permutation importance</h3><a href='figures/fig39_permutation_importance.png'><img src='figures/fig39_permutation_importance.png'></a>
+<h3>fig40 lbp bin discrimination</h3><a href='figures/fig40_lbp_bin_discrimination.png'><img src='figures/fig40_lbp_bin_discrimination.png'></a>
+<h3>fig43 pipeline diagram</h3><a href='figures/fig43_pipeline_diagram.png'><img src='figures/fig43_pipeline_diagram.png'></a>
+<h2>Tables</h2><ul>
+<li><a href='tables/B2_epoch_log.csv'>B2_epoch_log.csv</a></li>
+<li><a href='tables/lbp_bin_cohens_d.csv'>lbp_bin_cohens_d.csv</a></li>
+<li><a href='tables/permutation_importance.csv'>permutation_importance.csv</a></li>
+<li><a href='tables/predictions.csv'>predictions.csv</a></li>
+<li><a href='tables/split_manifest_seed42.csv'>split_manifest_seed42.csv</a></li>
+<li><a href='tables/split_manifest_seed43.csv'>split_manifest_seed43.csv</a></li>
+<li><a href='tables/split_manifest_seed44.csv'>split_manifest_seed44.csv</a></li>
+<li><a href='tables/split_manifest_seed45.csv'>split_manifest_seed45.csv</a></li>
+<li><a href='tables/split_manifest_seed46.csv'>split_manifest_seed46.csv</a></li>
+<li><a href='tables/T0_environment.csv'>T0_environment.csv</a></li>
+<li><a href='tables/T0_targets.csv'>T0_targets.csv</a></li>
+<li><a href='tables/T10_dataset_stats.csv'>T10_dataset_stats.csv</a></li>
+<li><a href='tables/T1_metrics_per_method.csv'>T1_metrics_per_method.csv</a></li>
+<li><a href='tables/T2_metrics_per_category.csv'>T2_metrics_per_category.csv</a></li>
+<li><a href='tables/T2_raw_per_seed.csv'>T2_raw_per_seed.csv</a></li>
+<li><a href='tables/T3_training_time.csv'>T3_training_time.csv</a></li>
+<li><a href='tables/T4_inference_latency.csv'>T4_inference_latency.csv</a></li>
+<li><a href='tables/T6_best_params.csv'>T6_best_params.csv</a></li>
+<li><a href='tables/T7_ablations.csv'>T7_ablations.csv</a></li>
+<li><a href='tables/T8_resources.csv'>T8_resources.csv</a></li>
+<li><a href='tables/T9_stat_tests.csv'>T9_stat_tests.csv</a></li>
+</ul><h2>Per-image gallery</h2><ul>
+<li><a href='gallery/index.csv'>gallery/index.csv</a></li>
+<li><a href='gallery/carpet/'>gallery/carpet/</a> (116 images)</li>
+</ul></body></html>
