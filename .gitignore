@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+.venv/
+data_cache/
+# Keep output images/figures in git, ignore only trained models
+outputs/**/models/
+outputs_quick/**/models/
+*.npz
+*.pkl
+*.joblib
+*.pt
+.ipynb_checkpoints/
+_sys/
+dataset/
